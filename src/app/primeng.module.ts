@@ -5,7 +5,7 @@ import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { InputTextModule } from 'primeng/inputtext';
 import { MenubarModule } from 'primeng/menubar';
-
+import { ToastModule } from 'primeng/toast';
 import { PasswordModule } from 'primeng/password';
 
 const modPrimeNg:any=[
@@ -13,7 +13,8 @@ const modPrimeNg:any=[
   CardModule,
   InputTextModule,
   MenubarModule,
-  PasswordModule
+  PasswordModule,
+  ToastModule
 ];
 @NgModule({
   declarations: [],
