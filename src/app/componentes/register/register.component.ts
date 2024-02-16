@@ -5,6 +5,8 @@ import { response } from 'express';
 import { error } from 'console';
 import { User } from '../../interfaces/user';
 import { MessageService } from 'primeng/api';
+import {Router} from '@angular/router';
+import { passwordMatchValidator } from '../../shared/password-match.directives';
 
 @Component({
   selector: 'app-register',
@@ -18,11 +20,14 @@ export class RegisterComponent {
   pass:['',Validators.required],
   confpass:['',Validators.required],
 
+},{
+  validators: passwordMatchValidator
 })
 
   constructor(private fb: FormBuilder,
     private outhService : AuthService,
-    private messageService: MessageService){
+    private messageService: MessageService,
+    private router: Router){
   }
 
   get fullname(){
@@ -52,12 +57,13 @@ export class RegisterComponent {
         severity: 'success', 
         summary: 'Registro Exitoso', 
         detail: 'El usuario ha sido registrado con Exito' });
+        this.router.navigate(['login'])
     },
     error => {
       this.messageService.add({ 
         severity: 'error', 
         summary: 'Registro Fallido', 
-        detail: 'El usuario no ha sido registrado' });
+        detail: 'Hubo un error al Agregar Usuario consulte al Administrador' });
     }
     )
 

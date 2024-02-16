@@ -1,6 +1,7 @@
 <form [formGroup]="registerForm" (ngSubmit)="enviarUsuario()">
     <p-card header="Registrar Miembro" [style]="{width:'360px'}">
         <div class="field">
+            <label for="pass">Nombre</label>
             <input type="text" pInputText formControlName="fullname" 
             placeholder="Nombre Completo" class="w-full"/>
         </div>
@@ -9,6 +10,7 @@
         </small>
 
         <div class="field">
+            <label for="pass">Correo</label>
             <input type="text" pInputText formControlName="email" 
             placeholder="Ingreasa Email" class="w-full"/>
         </div>
@@ -19,19 +21,32 @@
             
         
         <div class="field">
+            <label for="pass">Contraseña</label>
             <p-password 
             formControlName = "pass"
             name = "pass" placeholder="Ingreasa contraseña"
             [toggleMask]="true" styleClass="w-full" ></p-password>
         </div>
+        <small *ngIf="email.invalid && (pass.dirty || pass.touched)" class="block p-error">
+            <div *ngIf="pass.hasError('required')">Contraseña requerida</div>
+        </small>
         <div class="field">
+            <label for="confpass">Confrmar contraseña</label>
             <p-password 
-            formControlName = "pass"
+            formControlName = "confpass"
             name = "confpass" placeholder="Confirma contraseña"
             [toggleMask]="true" styleClass="w-full" ></p-password>
         </div>
+        <small *ngIf="confpass.invalid && (confpass.dirty || confpass.touched)" class="block p-error">
+            <div *ngIf="confpass.hasError('required')">Confirmar Contraseña</div>
+            <div *ngIf="confpass.hasError('passwordMismatch')">Email Incorrecto</div>
+        </small>
+        <small *ngIf="registerForm.hasError('passwordMismatch') && confpass.valid && pass.valid" class="block p-error">
+           Contraseñas no coinciden
+        </small>
+
         <div class="field">
-            <p-button label="Registrar" severity="success" styleClass="w-full" type="ngSubmit"></p-button>
+            <p-button label="Registrar" severity="success" styleClass="w-full" type="ngSubmit" [disabled]="registerForm.invalid"></p-button>
         </div>
         <div class="mt-2">
             ¿Ya tienes cuenta? <a routerLink="/login">Iniciar sesión</a>

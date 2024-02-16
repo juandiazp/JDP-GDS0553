@@ -1,6 +1,7 @@
-<form [formGroup]="loginForm">
+<form [formGroup]="loginForm" (ngSubmit)="login()">
     <p-card header="Ingresar al sistema" [style]="{width:'360px'}">
         <div class="field">
+            <label for="email">Email</label>
             <input type="text" pInputText formControlName="email" 
             placeholder="Ingreasa Email" class="w-full"/>
         </div>
@@ -11,13 +12,17 @@
             
         
         <div class="field">
+            <label for="pass">Contraseña</label>
             <p-password 
             formControlName = "pass"
             name = "pass" placeholder="Ingreasa contraseña"
             [toggleMask]="true" styleClass="w-full" ></p-password>
         </div>
+        <small *ngIf="email.invalid && (pass.dirty || pass.touched)" class="block p-error">
+            <div *ngIf="pass.hasError('required')">Contraseña requerida</div>
+        </small>
         <div class="field">
-            <p-button label="Ingresar" severity="success" styleClass="w-full" ></p-button>
+            <p-button label="Ingresar" severity="success" styleClass="w-full"  type="ngSubmit" [disabled]="loginForm.invalid"></p-button>
         </div>
         <div class="mt-2">
             ¿No tienes cuenta? <a routerLink="/register">Registrar</a>
