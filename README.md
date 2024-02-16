@@ -1,6 +1,29 @@
-# JdpGds0553
+# Practica Login
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.10.
+Este proyecto es una práctica con Angular, JSON Server, node.js y npm.
+
+## Requisitos Previos
+
+Tener instalado lo siguiente:
+
+- Node.js y npm
+- Angular CLI (si es necesario)
+- JSON Server
+
+## Instalar Node.js
+Si aún no los tienes instalados, descárgalos desde [https://nodejs.org/](https://nodejs.org/) e instálalos según las instrucciones.
+
+Verificar la versión de Node con el comando 
+```node -v```
+
+Verificar la versión de NPM con el comando 
+```npm -v```
+
+ **Angular CLI:** Asegúrate de tener Angular CLI instalado globalmente. Si no lo tienes, puedes instalarlo ejecutando el siguiente comando:
+
+   ```
+   npm install -g @angular/cli
+   ```
 
 ## Development server
 
