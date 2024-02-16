@@ -10,20 +10,33 @@ Tener instalado lo siguiente:
 - Angular CLI (si es necesario)
 - JSON Server
 
-## Instalar Node.js
-Si aún no los tienes instalados, descárgalos desde [https://nodejs.org/](https://nodejs.org/) e instálalos según las instrucciones.
+    **Node.js y npm:**
+    Si aún no los tienes instalados, descárgalos desde [https://nodejs.org/](https://nodejs.org/) e instálalos según las instrucciones.
 
-Verificar la versión de Node con el comando 
-```node -v```
+    Verificar la versión de Node con el comando 
+    ```
+    node -v
+    ```
 
-Verificar la versión de NPM con el comando 
-```npm -v```
+    Verificar la versión de NPM con el comando 
+    ```
+    npm -v
+    ```
 
- **Angular CLI:** Asegúrate de tener Angular CLI instalado globalmente. Si no lo tienes, puedes instalarlo ejecutando el siguiente comando:
+    **Angular CLI:** Asegúrate de tener Angular CLI instalado globalmente. Si no lo tienes, puedes instalarlo ejecutando el siguiente comando:
 
    ```
    npm install -g @angular/cli
    ```
+    Verificar versión de Angular con el comando 
+    ```
+    ng version
+    ```
+
+    **JSON Server**: Necesitarás JSON Server para simular el servidor de backend. Puedes instalarlo globalmente con el siguiente comando
+    ```
+    npm install -g json-server
+    ```
 
 ## Development server
 
