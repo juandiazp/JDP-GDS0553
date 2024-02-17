@@ -10,7 +10,7 @@ Tener instalado lo siguiente:
 - Angular CLI
 - JSON Server
 
-    **Node.js y npm:**
+    **Node.js**
     Si aún no los tienes instalados, descárgalos desde [https://nodejs.org/](https://nodejs.org/) e instálalos según las instrucciones.
 
     Verificar la versión de Node con el comando 
@@ -18,19 +18,27 @@ Tener instalado lo siguiente:
     node -v
     ```
 
-    Verificar la versión de NPM con el comando 
+    **Angular CLI:** 
+    Actualizar si se desea el programa NPM con el comando 
     ```
-    npm -v
+    npm install -g npm
     ```
 
-    **Angular CLI:** Asegúrate de tener Angular CLI instalado globalmente. Si no lo tienes, puedes instalarlo ejecutando el siguiente comando:
+    Asegúrate de tener Angular CLI instalado globalmente. Si no lo tienes, puedes instalarlo ejecutando el siguiente comando:
 
    ```
    npm install -g @angular/cli
    ```
-    Verificar versión de Angular con el comando 
+
+    Verificar la versión de NPM con el comando 
     ```
     ng version
+    ```
+
+    **Prime ng**
+    Instalar
+    ```
+    npm install primeng
     ```
 
     **JSON Server**: Necesitarás JSON Server para simular el servidor de backend. Puedes instalarlo globalmente con el siguiente comando
@@ -55,7 +63,7 @@ npm install
 
 ## Iniciar JSON Server
 ```
-Iniciar JSON Server
+json-server --watch db.json
 ```
 
 ## Iniciar la Aplicación
@@ -64,4 +72,4 @@ ng serve
 ```
 
 ## Ver la aplicación en funcionamiento
-Despues de iniciar la aplicacion con `ng serve` . Abre tu navegador y coloca esta URL [http://localhost:4200/](http://localhost:4200/)
+Despues de iniciar la aplicacion con `ng serve` . Abre tu navegador y coloca esta URL [http://localhost:4200/](http://localhost:4200/login)
