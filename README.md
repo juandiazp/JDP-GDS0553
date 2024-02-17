@@ -7,7 +7,7 @@ Este proyecto es una práctica con Angular, JSON Server, node.js y npm.
 Tener instalado lo siguiente:
 
 - Node.js y npm
-- Angular CLI (si es necesario)
+- Angular CLI
 - JSON Server
 
     **Node.js y npm:**
@@ -48,7 +48,7 @@ git clone https://github.com/juandiazp/JDP-GDS0553.git
 cd jdp-gds0553
 ```
 
-## Instala las dependencias
+## Instalar las dependencias
 ```
 npm install
 ```
@@ -64,4 +64,4 @@ ng serve
 ```
 
 ## Ver la aplicación en funcionamiento
-Despues de iniciar la aplicacion con `ng serve` . Abre tu navegador y colocar a esta URL `http://localhost:4200/`. 
+Despues de iniciar la aplicacion con `ng serve` . Abre tu navegador y coloca esta URL [http://localhost:4200/](http://localhost:4200/)
