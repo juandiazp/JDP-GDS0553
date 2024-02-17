@@ -29,6 +29,12 @@
       "fullname": "Juan Díaz",
       "email": "jta@gmail.com",
       "pass": "12345"
+    },
+    {
+      "id": "42be",
+      "fullname": "Juan",
+      "email": "juan@gmail.com",
+      "pass": "MN5lkjhs"
     }
   ]
 }

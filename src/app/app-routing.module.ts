@@ -5,6 +5,7 @@ import { RegisterComponent } from './componentes/register/register.component';
 import { HeaderComponent } from './componentes/header/header.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { HomeComponent } from './componentes/home/home.component';
+import { authGuard } from './guardias/auth.guard';
 
 const routes: Routes = [
   {
@@ -25,7 +26,8 @@ const routes: Routes = [
   },
   {
     path:'home',
-    component: HomeComponent
+    component: HomeComponent,
+    canActivate:[authGuard]
   },
   {
     path:'', 

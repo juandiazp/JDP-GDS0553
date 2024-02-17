@@ -72,4 +72,4 @@ ng serve
 ```
 
 ## Ver la aplicación en funcionamiento
-Despues de iniciar la aplicacion con `ng serve` . Abre tu navegador y coloca esta URL [http://localhost:4200/](http://localhost:4200/login)
+Despues de iniciar la aplicacion con `ng serve` . Abre tu navegador y coloca esta URL [http://localhost:4200/](http://localhost:4200/)

@@ -7,6 +7,7 @@
         </div>
         <small *ngIf="fullname.invalid && (fullname.dirty || email.touched)" class="block p-error">
             <div *ngIf="fullname.hasError('required')">Ingreasa nombre completo</div>
+            <div *ngIf="fullname.hasError('pattern')">El nombre debe ser valido</div>
         </small>
 
         <div class="field">
@@ -29,6 +30,7 @@
         </div>
         <small *ngIf="email.invalid && (pass.dirty || pass.touched)" class="block p-error">
             <div *ngIf="pass.hasError('required')">Contraseña requerida</div>
+            <div *ngIf="pass.hasError('pattern')">Debe contener al menos: un dígito, una letra minúscula, una letra mayúscula y una longitud mínima de 8 caracteres</div>
         </small>
         <div class="field">
             <label for="confpass">Confrmar contraseña</label>
@@ -46,7 +48,8 @@
         </small>
 
         <div class="field">
-            <p-button label="Registrar" severity="success" styleClass="w-full" type="ngSubmit" [disabled]="registerForm.invalid"></p-button>
+            <p-button label="Registrar" severity="success" styleClass="w-full" 
+            type="ngSubmit" [disabled]="registerForm.invalid"></p-button>
         </div>
         <div class="mt-2">
             ¿Ya tienes cuenta? <a routerLink="/login">Iniciar sesión</a>
