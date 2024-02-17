@@ -73,3 +73,7 @@ ng serve
 
 ## Ver la aplicación en funcionamiento
 Despues de iniciar la aplicacion con `ng serve` . Abre tu navegador y coloca esta URL [http://localhost:4200/](http://localhost:4200/)
+
+
+## Detener la Aplicación
+Para detener la aplicación Angular, puedes presionar Ctrl + C en la terminal donde se está ejecutando ng serve. Para detener JSON Server, puedes presionar Ctrl + C en la terminal donde se está ejecutando json-server.
